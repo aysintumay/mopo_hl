@@ -1,0 +1,19 @@
+[2025-07-06 10:57:34,607][__main__][INFO] - [rank: 0] Instantiating model <src.models.transition_model.TransitionModel>
+[2025-07-06 10:57:34,688][__main__][INFO] - [rank: 0] Instantiating data buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-06 10:57:34,718][__main__][INFO] - [rank: 0] Instantiating model buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-06 10:57:34,744][lightning.fabric.utilities.seed][INFO] - Seed set to 1
+[2025-07-06 10:57:34,747][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-07-06 10:57:34,748][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-07-06 10:57:34,772][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2025-07-06 10:57:34,777][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-07-06 10:57:34,779][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2025-07-06 10:57:34,781][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-07-06 10:57:34,781][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2025-07-06 10:57:34,801][__main__][INFO] - [rank: 0] Instantiating model <src.algos.mopo.MOPO>
+[2025-07-06 10:57:38,076][__main__][INFO] - [rank: 0] started the modules
+[2025-07-06 10:57:38,078][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-07-06 10:57:42,079][pytorch_lightning.utilities.rank_zero][INFO] - Trainer already configured with model summary callbacks: [<class 'lightning.pytorch.callbacks.rich_model_summary.RichModelSummary'>]. Skipping setting a default `ModelSummary` callback.
+[2025-07-06 10:57:42,168][pytorch_lightning.utilities.rank_zero][INFO] - GPU available: True (cuda), used: False
+[2025-07-06 10:57:42,171][pytorch_lightning.utilities.rank_zero][INFO] - TPU available: False, using: 0 TPU cores
+[2025-07-06 10:57:42,172][pytorch_lightning.utilities.rank_zero][INFO] - HPU available: False, using: 0 HPUs
+[2025-07-06 10:58:08,525][__main__][INFO] - [rank: 0] Logging hyperparameters!

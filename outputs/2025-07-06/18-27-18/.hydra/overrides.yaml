@@ -1,0 +1,2 @@
+- pretrained=False
+- trainer.max_epochs=10

@@ -1,0 +1,13 @@
+[2025-07-06 17:37:02,212][__main__][INFO] - [rank: 0] Instantiating model <src.models.transition_model.TransitionModel>
+[2025-07-06 17:37:02,283][__main__][INFO] - [rank: 0] Instantiating data buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-06 17:37:02,299][__main__][INFO] - [rank: 0] Instantiating model buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-06 17:37:02,315][lightning.fabric.utilities.seed][INFO] - Seed set to 1
+[2025-07-06 17:37:02,316][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-07-06 17:37:02,317][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-07-06 17:37:02,324][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-07-06 17:37:02,325][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2025-07-06 17:37:02,326][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-07-06 17:37:02,326][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2025-07-06 17:37:02,333][__main__][INFO] - [rank: 0] Instantiating model <src.algos.mopo.MOPO>
+[2025-07-06 17:37:04,288][__main__][INFO] - [rank: 0] started the modules
+[2025-07-06 17:37:04,289][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>

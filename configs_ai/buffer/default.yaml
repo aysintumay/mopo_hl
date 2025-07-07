@@ -1,0 +1,19 @@
+
+
+ 
+data:
+  _target_: common.replay_buffer_wrapper.ReplayBufferWrapper
+  # dataset: null
+  buffer_size: 1000000
+  obs_shape: 17     
+  action_dim: 6        
+  obs_dtype: float32
+  action_dtype: float32
+
+model:
+  _target_: common.replay_buffer_wrapper.ReplayBufferWrapper
+  buffer_size: 1000000
+  obs_shape: 17       
+  action_dim: 6         
+  obs_dtype: float32
+  action_dtype: float32

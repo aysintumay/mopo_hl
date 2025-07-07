@@ -1,0 +1,7 @@
+[2025-07-05 15:17:50,897][__main__][INFO] - [rank: 0] Instantiating model <src.models.transition_model.TransitionModel>
+[2025-07-05 15:17:51,034][__main__][INFO] - [rank: 0] Instantiating data buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-05 15:17:51,062][__main__][INFO] - [rank: 0] Instantiating model buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-05 15:17:51,087][lightning.fabric.utilities.seed][INFO] - Seed set to 1
+[2025-07-05 15:17:51,089][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-07-05 15:17:51,090][utils.instantiators][WARNING] - [rank: 0] No callback configs found! Skipping..
+[2025-07-05 15:17:51,090][__main__][INFO] - [rank: 0] Instantiating loggers...

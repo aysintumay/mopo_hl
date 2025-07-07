@@ -1,0 +1,92 @@
+env:
+  task: halfcheetah-random-v0
+  transition_params:
+    model_batch_size: 2048
+    use_weight_decay: true
+    optimizer_class: Adam
+    learning_rate: 0.001
+    holdout_ratio: 0.2
+    inc_var_loss: true
+    model:
+      hidden_dims:
+      - 200
+      - 200
+      - 200
+      - 200
+      decay_weights:
+      - 2.5e-05
+      - 5.0e-05
+      - 7.5e-05
+      - 7.5e-05
+      - 0.0001
+      act_fn: swish
+      out_act_fn: identity
+      num_elite: 5
+      ensemble_size: 7
+  mopo_params:
+    max_epoch: 400
+    rollout_batch_size: 50000
+    rollout_mini_batch_size: 10000
+    model_retain_epochs: 1
+    num_env_steps_per_epoch: 1000
+    train_model_interval: 250
+    max_trajectory_length: 1000
+    eval_interval: 1000
+    num_eval_trajectories: 10
+    snapshot_interval: 2000
+    model_env_ratio: 0.95
+    max_model_update_epochs_to_improve: 5
+    max_model_train_iterations: null
+train:
+  epoch: 100
+  step_per_epoch: 1000
+  eval_episodes: 10
+  batch_size: 256
+  log_freq: 1000
+  terminal_counter: 1
+model:
+  actor_lr: 0.0003
+  critic_lr: 0.0003
+  alpha_lr: 0.0003
+  gamma: 0.99
+  tau: 0.005
+  alpha: []
+  auto_alpha: true
+  target_entropy: -3
+  dynamics_lr: 0.001
+  n_ensembles: 7
+  n_elites: 5
+buffer:
+  rollout_length: 3
+  model_retain_epochs: 5
+  real_ratio: 0.05
+mopo:
+  reward_penalty_coef: 0
+  mopo_params:
+    rollout_batch_size: 50000
+uambpo:
+  num_samples: 50
+  crps_scale: 0.05
+  discount_factor: 0.1
+  batch_size_generation: 50
+trainer:
+  _target_: lightning.pytorch.trainer.Trainer
+  default_root_dir: ${paths.output_dir}
+  min_epochs: 1
+  max_epochs: 10
+  accelerator: gpu
+  devices: 4
+  check_val_every_n_epoch: 1
+  deterministic: false
+  strategy: ddp
+  num_nodes: 1
+  sync_batchnorm: true
+algo_name: mbpo_uq
+seed: 0
+pretrained: true
+mode: offline
+policy_path: ''
+model_path: saved_models
+world_model_path: saved_models/halfcheetah-random-v0/world_model_0.55.pth
+logdir: log
+iter: 3

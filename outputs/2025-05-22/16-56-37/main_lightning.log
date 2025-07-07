@@ -1,0 +1,16 @@
+[2025-05-22 16:56:45,171][pytorch_lightning.utilities.rank_zero][INFO] - GPU available: True (cuda), used: True
+[2025-05-22 16:56:45,172][pytorch_lightning.utilities.rank_zero][INFO] - TPU available: False, using: 0 TPU cores
+[2025-05-22 16:56:45,172][pytorch_lightning.utilities.rank_zero][INFO] - HPU available: False, using: 0 HPUs
+[2025-05-22 16:56:45,174][pytorch_lightning.utilities.rank_zero][INFO] - You are using a CUDA device ('NVIDIA A100 80GB PCIe') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[2025-05-22 16:56:46,700][pytorch_lightning.accelerators.cuda][INFO] - LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+[2025-05-22 16:56:46,704][pytorch_lightning.callbacks.model_summary][INFO] - 
+  | Name | Type | Params | Mode 
+--------------------------------------
+0 | algo | MOPO | 362 K  | train
+--------------------------------------
+362 K     Trainable params
+0         Non-trainable params
+362 K     Total params
+1.449     Total estimated model params size (MB)
+28        Modules in train mode
+16        Modules in eval mode

@@ -1,0 +1,16 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /train: default.yaml
+  - override /model: wm-hopper.yaml
+  
+
+train:
+  device: 3
+
+dataset: hopper-expert-v0
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters

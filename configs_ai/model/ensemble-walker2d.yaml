@@ -1,0 +1,24 @@
+_target_: src.models.transition_model.TransitionModel
+
+# Dynamics model training config
+obs_space: null
+action_space: null
+static_fns: null
+lr: 0.001
+model_batch_size: 2048
+use_weight_decay: True
+optimizer_class: Adam
+# learning_rate: 0.001
+holdout_ratio: 0.2
+inc_var_loss: True
+# Model architecture config
+n_ensembles: 7
+n_elites: 5
+reward_penalty_coef: 1.0
+model:
+  hidden_dims: [200, 200, 200, 200]
+  decay_weights: [0.000025, 0.00005, 0.000075, 0.000075, 0.0001]
+  act_fn: swish
+  out_act_fn: identity
+  num_elite: 5         # redundant with n_elites but can be used internally
+  ensemble_size: 7     # redundant with n_ensembles but can be used internally

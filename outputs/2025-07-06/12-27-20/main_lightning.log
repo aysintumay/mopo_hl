@@ -1,0 +1,11 @@
+[2025-07-06 12:27:28,920][__main__][INFO] - [rank: 0] Instantiating model <src.models.transition_model.TransitionModel>
+[2025-07-06 12:27:29,056][__main__][INFO] - [rank: 0] Instantiating data buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-06 12:27:29,084][__main__][INFO] - [rank: 0] Instantiating model buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-06 12:27:29,109][lightning.fabric.utilities.seed][INFO] - Seed set to 1
+[2025-07-06 12:27:29,112][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-07-06 12:27:29,112][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-07-06 12:27:29,130][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-07-06 12:27:29,132][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2025-07-06 12:27:29,134][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-07-06 12:27:29,135][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2025-07-06 12:27:29,155][__main__][INFO] - [rank: 0] Instantiating model <src.algos.mopo.MOPO>

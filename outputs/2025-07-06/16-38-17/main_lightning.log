@@ -1,0 +1,20 @@
+[2025-07-06 16:38:24,535][__main__][INFO] - [rank: 0] Instantiating model <src.models.transition_model.TransitionModel>
+[2025-07-06 16:38:24,602][__main__][INFO] - [rank: 0] Instantiating data buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-06 16:38:24,620][__main__][INFO] - [rank: 0] Instantiating model buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-06 16:38:24,634][lightning.fabric.utilities.seed][INFO] - Seed set to 1
+[2025-07-06 16:38:24,636][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-07-06 16:38:24,636][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-07-06 16:38:24,642][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-07-06 16:38:24,643][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2025-07-06 16:38:24,643][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-07-06 16:38:24,644][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2025-07-06 16:38:24,650][__main__][INFO] - [rank: 0] Instantiating model <src.algos.mopo.MOPO>
+[2025-07-06 16:38:26,486][__main__][INFO] - [rank: 0] started the modules
+[2025-07-06 16:38:26,487][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-07-06 16:38:26,498][pytorch_lightning.utilities.rank_zero][INFO] - Trainer already configured with model summary callbacks: [<class 'lightning.pytorch.callbacks.rich_model_summary.RichModelSummary'>]. Skipping setting a default `ModelSummary` callback.
+[2025-07-06 16:38:26,528][pytorch_lightning.utilities.rank_zero][INFO] - GPU available: True (cuda), used: False
+[2025-07-06 16:38:26,529][pytorch_lightning.utilities.rank_zero][INFO] - TPU available: False, using: 0 TPU cores
+[2025-07-06 16:38:26,529][pytorch_lightning.utilities.rank_zero][INFO] - HPU available: False, using: 0 HPUs
+[2025-07-06 16:38:26,530][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-07-06 16:38:26,535][__main__][INFO] - [rank: 0] Starting training!
+[2025-07-06 16:38:41,898][pytorch_lightning.utilities.rank_zero][INFO] - `Trainer.fit` stopped: `max_epochs=10` reached.

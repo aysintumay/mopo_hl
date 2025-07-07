@@ -1,0 +1,15 @@
+[2025-07-05 15:58:25,421][__main__][INFO] - [rank: 0] Instantiating model <src.models.transition_model.TransitionModel>
+[2025-07-05 15:58:25,713][__main__][INFO] - [rank: 0] Instantiating data buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-05 15:58:25,741][__main__][INFO] - [rank: 0] Instantiating model buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-05 15:58:25,767][lightning.fabric.utilities.seed][INFO] - Seed set to 1
+[2025-07-05 15:58:25,769][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-07-05 15:58:25,770][utils.instantiators][WARNING] - [rank: 0] No callback configs found! Skipping..
+[2025-07-05 15:58:25,771][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-07-05 15:58:25,771][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2025-07-05 15:58:25,800][__main__][INFO] - [rank: 0] Instantiating model <src.algos.mopo.MOPO>
+[2025-07-05 15:58:28,893][__main__][INFO] - [rank: 0] started the modules
+[2025-07-05 15:58:28,894][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-07-05 15:58:35,607][pytorch_lightning.utilities.rank_zero][INFO] - GPU available: True (cuda), used: False
+[2025-07-05 15:58:35,609][pytorch_lightning.utilities.rank_zero][INFO] - TPU available: False, using: 0 TPU cores
+[2025-07-05 15:58:35,610][pytorch_lightning.utilities.rank_zero][INFO] - HPU available: False, using: 0 HPUs
+[2025-07-05 15:58:39,190][__main__][INFO] - [rank: 0] Logging hyperparameters!

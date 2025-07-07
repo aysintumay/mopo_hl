@@ -1,0 +1,9 @@
+_target_: src.models.world_model.D4RLWorldModel
+model_name: 'world_model'
+lr: 1e-3
+holdout_ratio: 0.1,
+epochs: 50
+hidden_dim: 512
+lambda_obs: 0.8
+reward_penalty_coef: 0.01
+

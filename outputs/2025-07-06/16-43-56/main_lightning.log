@@ -1,0 +1,19 @@
+[2025-07-06 16:44:02,666][__main__][INFO] - [rank: 0] Instantiating model <src.models.transition_model.TransitionModel>
+[2025-07-06 16:44:02,708][__main__][INFO] - [rank: 0] Instantiating data buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-06 16:44:02,724][__main__][INFO] - [rank: 0] Instantiating model buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-06 16:44:02,738][lightning.fabric.utilities.seed][INFO] - Seed set to 1
+[2025-07-06 16:44:02,740][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-07-06 16:44:02,740][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-07-06 16:44:02,746][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-07-06 16:44:02,747][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2025-07-06 16:44:02,748][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-07-06 16:44:02,748][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2025-07-06 16:44:02,755][__main__][INFO] - [rank: 0] Instantiating model <src.algos.mopo.MOPO>
+[2025-07-06 16:44:04,645][__main__][INFO] - [rank: 0] started the modules
+[2025-07-06 16:44:04,647][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-07-06 16:44:04,660][pytorch_lightning.utilities.rank_zero][INFO] - Trainer already configured with model summary callbacks: [<class 'lightning.pytorch.callbacks.rich_model_summary.RichModelSummary'>]. Skipping setting a default `ModelSummary` callback.
+[2025-07-06 16:44:04,690][pytorch_lightning.utilities.rank_zero][INFO] - GPU available: True (cuda), used: False
+[2025-07-06 16:44:04,691][pytorch_lightning.utilities.rank_zero][INFO] - TPU available: False, using: 0 TPU cores
+[2025-07-06 16:44:04,691][pytorch_lightning.utilities.rank_zero][INFO] - HPU available: False, using: 0 HPUs
+[2025-07-06 16:44:04,692][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-07-06 16:44:04,697][__main__][INFO] - [rank: 0] Starting training!

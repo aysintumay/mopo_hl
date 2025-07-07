@@ -1,0 +1,3 @@
+[2025-07-02 13:15:44,706][lightning.fabric.utilities.seed][INFO] - Seed set to 1
+[2025-07-02 13:15:44,711][utils.instantiators][WARNING] - [rank: 0] No callback configs found! Skipping..
+[2025-07-02 13:15:44,711][__main__][INFO] - [rank: 0] Instantiating loggers...

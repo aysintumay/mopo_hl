@@ -1,0 +1,59 @@
+[2025-07-06 12:10:29,025][__main__][INFO] - [rank: 0] Instantiating model <src.models.transition_model.TransitionModel>
+[2025-07-06 12:10:29,142][__main__][INFO] - [rank: 0] Instantiating data buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-06 12:10:29,170][__main__][INFO] - [rank: 0] Instantiating model buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-06 12:10:29,196][lightning.fabric.utilities.seed][INFO] - Seed set to 1
+[2025-07-06 12:10:29,198][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-07-06 12:10:29,199][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-07-06 12:10:29,216][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-07-06 12:10:29,218][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2025-07-06 12:10:29,220][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-07-06 12:10:29,221][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2025-07-06 12:10:29,246][__main__][INFO] - [rank: 0] Instantiating model <src.algos.mopo.MOPO>
+[2025-07-06 12:10:32,419][__main__][INFO] - [rank: 0] started the modules
+[2025-07-06 12:10:32,420][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-07-06 12:10:32,452][pytorch_lightning.utilities.rank_zero][INFO] - Trainer already configured with model summary callbacks: [<class 'lightning.pytorch.callbacks.rich_model_summary.RichModelSummary'>]. Skipping setting a default `ModelSummary` callback.
+[2025-07-06 12:10:32,522][pytorch_lightning.utilities.rank_zero][INFO] - GPU available: True (cuda), used: False
+[2025-07-06 12:10:32,524][pytorch_lightning.utilities.rank_zero][INFO] - TPU available: False, using: 0 TPU cores
+[2025-07-06 12:10:32,524][pytorch_lightning.utilities.rank_zero][INFO] - HPU available: False, using: 0 HPUs
+[2025-07-06 12:10:32,525][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-07-06 12:10:32,545][__main__][INFO] - [rank: 0] Starting training!
+[2025-07-06 12:15:39,302][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,314][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,302][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,901][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,901][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,901][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,906][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,906][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,902][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,908][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,908][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,908][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,908][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,908][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,908][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,908][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,909][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,909][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,909][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,909][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,909][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,910][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,914][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,915][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,916][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,916][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,919][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,916][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,921][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,921][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,921][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,922][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,922][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,923][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,924][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,924][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,929][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,935][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,935][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15
+[2025-07-06 12:15:39,936][lightning.pytorch.trainer.connectors.signal_connector][INFO] - [rank: 0] Received SIGTERM: 15

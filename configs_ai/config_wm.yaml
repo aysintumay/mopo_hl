@@ -1,0 +1,25 @@
+defaults:
+  - env: hopper
+  - train: default
+  - model: wm-hopper #transition model
+  - buffer: default
+  - rl_model: mopo-hopper
+  - policy: sac
+  - trainer: gpu
+  - logger: wandb
+  - experiment: default
+  - paths: default
+  - callbacks: default
+  - _self_
+
+dataset: hopper-random-v0
+  
+seed: 1
+pretrained: True
+algo_name: 'mopo'
+# policy_path: ""
+# model_path: saved_models
+#world_model_path: saved_models/halfcheetah-random-v0/world_model_0.55.pth
+# logdir: log
+# iter: 3
+# ckpt_path: 'saved_models'
