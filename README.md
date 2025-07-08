@@ -112,7 +112,8 @@ python src/main_lightning.py experiment=ensemble_hopper_expert_mopo
 ```
 python src/main_lightning.py experiment=ensemble_hopper_expert_mbpo
 ```
-- currently debugged
+- currently debugged 
+
 **Run MOPO with default world model for hopper-expert-v0 dataset**
 ```
 python src/main_lightning.py experiment=wm_hopper_expert_mopo
