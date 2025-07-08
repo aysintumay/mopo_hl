@@ -65,7 +65,7 @@ Override the main config parameters and modules [configs_ai/config.yaml](configs
 3. Write your experiment config, containing paths to model and datamodule
 4. Run training with chosen experiment config: the following config overrides the model with world model config.
    ```bash
-   python src/train.py experiment=wm_experiment.yaml
+   python src/main_lightning.py experiment=wm_experiment.yaml
    ```
 ## Logs
 
