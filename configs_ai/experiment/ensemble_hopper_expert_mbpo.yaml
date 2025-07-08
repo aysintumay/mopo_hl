@@ -1,0 +1,24 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+dataset: hopper-expert-v0
+algo_name: 'mbpo'
+
+defaults:
+  - override /train: default.yaml
+  - override /model: wm-hopper.yaml
+  # - override dataset: d4rl.yaml
+  
+
+train:
+  device: 3
+  eval_episodes: 1000
+
+model:
+  reward_penalty_coef: 0.0
+
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters

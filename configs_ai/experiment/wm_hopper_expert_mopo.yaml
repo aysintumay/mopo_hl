@@ -3,14 +3,21 @@
 # to execute this experiment run:
 # python train.py experiment=example
 
+dataset: hopper-expert-v0
+algo_name: 'mopo'
+
 defaults:
   - override /train: default.yaml
   - override /model: wm-hopper.yaml
+  # - override dataset: d4rl.yaml
   
 
 train:
   device: 3
 
-dataset: hopper-expert-v0
+model:
+  reward_penalty_coef: 0.01
+
+
 # all parameters below will be merged with parameters from default configurations set above
 # this allows you to overwrite only specified parameters

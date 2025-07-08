@@ -1,0 +1,23 @@
+[2025-07-07 14:13:13,576][__main__][INFO] - [rank: 0] Instantiating model <src.models.world_model.D4RLWorldModel>
+[2025-07-07 14:13:19,120][__main__][INFO] - [rank: 0] Instantiating data buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-07 14:13:19,154][__main__][INFO] - [rank: 0] Instantiating model buffer <common.replay_buffer_wrapper.ReplayBufferWrapper>
+[2025-07-07 14:13:19,165][lightning.fabric.utilities.seed][INFO] - Seed set to 1
+[2025-07-07 14:13:19,168][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-07-07 14:13:19,168][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-07-07 14:13:19,175][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-07-07 14:13:19,176][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2025-07-07 14:13:19,177][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-07-07 14:13:19,177][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2025-07-07 14:13:19,184][__main__][INFO] - [rank: 0] Instantiating model <src.algos.mopo.MOPO>
+[2025-07-07 14:13:21,221][__main__][INFO] - [rank: 0] started the modules
+[2025-07-07 14:13:21,222][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-07-07 14:13:21,237][pytorch_lightning.utilities.rank_zero][INFO] - Using 16bit Automatic Mixed Precision (AMP)
+[2025-07-07 14:13:21,239][pytorch_lightning.utilities.rank_zero][INFO] - Trainer already configured with model summary callbacks: [<class 'lightning.pytorch.callbacks.rich_model_summary.RichModelSummary'>]. Skipping setting a default `ModelSummary` callback.
+[2025-07-07 14:13:21,271][pytorch_lightning.utilities.rank_zero][INFO] - GPU available: True (cuda), used: True
+[2025-07-07 14:13:21,273][pytorch_lightning.utilities.rank_zero][INFO] - TPU available: False, using: 0 TPU cores
+[2025-07-07 14:13:21,274][pytorch_lightning.utilities.rank_zero][INFO] - HPU available: False, using: 0 HPUs
+[2025-07-07 14:13:21,274][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-07-07 14:13:21,278][__main__][INFO] - [rank: 0] Starting training!
+[2025-07-07 14:13:21,280][pytorch_lightning.utilities.rank_zero][INFO] - You are using a CUDA device ('NVIDIA A100 80GB PCIe') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[2025-07-07 14:13:21,471][lightning.pytorch.accelerators.cuda][INFO] - LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+[2025-07-07 14:14:25,435][lightning.pytorch.accelerators.cuda][INFO] - LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]

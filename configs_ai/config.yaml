@@ -9,10 +9,11 @@ defaults:
   - logger: wandb
   - paths: default
   - callbacks: default
-  - experiment: null
   - _self_
+  - experiment: null 
+  
 
-dataset: hopper-random-v0
+dataset: "hopper-random-v0"
   
 seed: 1
 pretrained: True

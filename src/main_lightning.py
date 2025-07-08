@@ -159,7 +159,7 @@ def main(cfg: DictConfig):
     if logger:
         log.info("Logging hyperparameters!")
         log_hyperparameters(object_dict)
-
+    print(cfg.model.reward_penalty_coef, cfg.dataset, cfg.train.device, cfg.algo_name)
     if cfg.get("train"):
         log.info("Starting training!")
         trainer.fit(model=system, datamodule = datamodule, ckpt_path=None)

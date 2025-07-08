@@ -1,0 +1,4 @@
+- dataset=hopper-expert-v0
+- pretrained=True
+- train.eval_episodes=1000
+- train.device=0

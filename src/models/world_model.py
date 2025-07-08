@@ -38,13 +38,15 @@ class D4RLWorldModel:
         self.model_name = model_name
         # device = args.device
         self.env = gym.make(env_name)
+        print('dataset name is', env_name)
 
         if load_data:
             if dataset is None:
                 self.dataset = d4rl.qlearning_dataset(self.env)
+                print('loaded dataset from d4rl')
             else:
                 self.dataset = dataset
-            print("loaded dataset")
+                print("loaded dataset")
         # set_global_device(device)
         # util.device = device
 
@@ -72,6 +74,7 @@ class D4RLWorldModel:
         self.holdout_ratio = holdout_ratio
         self.model_train_timesteps = 0
         self.reward_penalty_coef = reward_penalty_coef
+        print(f"Reward penalty coefficient: {self.reward_penalty_coef}")
         self.static_fns = importlib.import_module(f"static_fns.{env_name.split('-')[0]}").StaticFns
 
         
@@ -170,9 +173,13 @@ class D4RLWorldModel:
                 # action = self.act_normalizer.transform(action)
                 # Predict
                 # print('no uq')
-                pred_next_obs, pred_reward = self.model(torch.cat([obs, action], dim=1))
+                all_preds, reward_preds = self.model(torch.cat([obs, action], dim=1))
+                print("Output stats:", all_preds.min(), all_preds.max(), all_preds.mean(),all_preds.std())
+                print("Input stats:", obs.min(), obs.max(), obs.mean(), obs.std())
+                print("Input stats:", action.min(), action.max(), action.mean())
                 # Denormalize output
                 # pred_next_obs = self.obs_normalizer.inverse_transform(pred_next_obs)
+                info = None
                 
             else:
                 self.model.train()
@@ -250,13 +257,17 @@ class D4RLWorldModel:
                     base_rewards.append(next_reward)
 
 
-            all_preds = torch.cat(all_preds, dim=0)
-            reward_preds = torch.cat(reward_preds, dim=0)
-            all_stds = torch.cat(all_stds, dim=0)
-            base_rewards = torch.cat(base_rewards, dim=0)
+                all_preds = torch.cat(all_preds, dim=0)
+                reward_preds = torch.cat(reward_preds, dim=0)
+                all_stds = torch.cat(all_stds, dim=0)
+                base_rewards = torch.cat(base_rewards, dim=0)
+                info  = (all_stds, base_rewards)
+            print("Output stats:", all_preds.min(), all_preds.max(), all_preds.mean(),all_preds.std())
+            print("Input stats:", obs.min(), obs.max(), obs.mean(), obs.std())
+            print("Input stats:", action.min(), action.max(), action.mean())
             terminals = self.static_fns.termination_fn(obs.detach().cpu().numpy(), action.detach().cpu().numpy(), all_preds.detach().cpu().numpy())
             terminals = terminals[:, None]
-        return all_preds.cpu().numpy(), reward_preds.cpu().numpy().reshape(-1,1), terminals, (all_stds, base_rewards)
+        return all_preds.cpu().numpy(), reward_preds.cpu().numpy().reshape(-1,1), terminals, info
 
 
     
@@ -279,6 +290,7 @@ class D4RLWorldModel:
         self.model.load_state_dict(checkpoint['model_state_dict'])
         self.obs_normalizer = checkpoint['obs_normalizer']
         self.act_normalizer = checkpoint['act_normalizer']
+        print(f'loaded from {load_dir}')
 
 class MLPNetwork(nn.Module):
     def __init__(self, obs_dim, action_dim, device='cuda', hidden_dim=512, dropout=0.1):

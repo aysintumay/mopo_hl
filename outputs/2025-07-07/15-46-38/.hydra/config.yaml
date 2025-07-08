@@ -1,0 +1,161 @@
+env:
+  task: hopper
+  transition_params:
+    model_batch_size: 2048
+    use_weight_decay: true
+    optimizer_class: Adam
+    learning_rate: 0.001
+    holdout_ratio: 0.2
+    inc_var_loss: true
+    model:
+      hidden_dims:
+      - 200
+      - 200
+      - 200
+      - 200
+      decay_weights:
+      - 2.5e-05
+      - 5.0e-05
+      - 7.5e-05
+      - 7.5e-05
+      - 0.0001
+      act_fn: swish
+      out_act_fn: identity
+      num_elite: 5
+      ensemble_size: 7
+  mopo_params:
+    reward_penalty_coef: 1.0
+    rollout_length: 5
+    real_ratio: 0.05
+    rollout_freq: 1000
+    max_epoch: 125
+    rollout_batch_size: 50000
+    rollout_mini_batch_size: 10000
+    model_retain_epochs: 1
+    num_env_steps_per_epoch: 1000
+    train_model_interval: 250
+    max_trajectory_length: 1000
+    eval_interval: 1000
+    num_eval_trajectories: 10
+    snapshot_interval: 2000
+    model_env_ratio: 0.95
+    max_model_update_epochs_to_improve: 5
+    max_model_train_iterations: null
+train:
+  step_per_epoch: 1000
+  eval_episodes: 10
+  batch_size: 256
+  log_freq: 1000
+  terminal_counter: 1
+  device: 3
+model:
+  _target_: src.models.world_model.D4RLWorldModel
+  model_name: world_model
+  lr: 0.001
+  holdout_ratio: 0.1,
+  epochs: 50
+  hidden_dim: 512
+  lambda_obs: 0.8
+  reward_penalty_coef: 0.0
+buffer:
+  data:
+    _target_: common.replay_buffer_wrapper.ReplayBufferWrapper
+    buffer_size: 1000000
+    obs_shape: 17
+    action_dim: 6
+    obs_dtype: float32
+    action_dtype: float32
+  model:
+    _target_: common.replay_buffer_wrapper.ReplayBufferWrapper
+    buffer_size: 1000000
+    obs_shape: 17
+    action_dim: 6
+    obs_dtype: float32
+    action_dtype: float32
+rl_model:
+  _target_: src.algos.mopo.MOPO
+  rollout_length: 5
+  real_ratio: 0.05
+  rollout_freq: 1000
+  mopo_params:
+    max_epoch: 400
+    rollout_batch_size: 50000
+    rollout_mini_batch_size: 10000
+    model_retain_epochs: 1
+    num_env_steps_per_epoch: 1000
+    train_model_interval: 250
+    max_trajectory_length: 1000
+    eval_interval: 1000
+    num_eval_trajectories: 10
+    snapshot_interval: 2000
+    model_env_ratio: 0.95
+    max_model_update_epochs_to_improve: 5
+    max_model_train_iterations: null
+policy:
+  _target_: src.algos.sac.SACPolicy
+  actor_lr: 0.0003
+  critic_lr: 0.0003
+  alpha_lr: 0.0003
+  gamma: 0.99
+  tau: 0.005
+  alpha: []
+  auto_alpha: true
+  target_entropy: -3
+trainer:
+  _target_: lightning.pytorch.trainer.Trainer
+  default_root_dir: ${hydra:run.dir}
+  min_epochs: 1
+  max_epochs: 100
+  accelerator: gpu
+  devices: 1
+  check_val_every_n_epoch: 50
+  deterministic: false
+  log_every_n_steps: 1
+  precision: 16
+logger:
+  wandb:
+    _target_: lightning.pytorch.loggers.wandb.WandbLogger
+    save_dir: ${paths.output_dir}
+    offline: false
+    id: null
+    anonymous: null
+    project: ${algo_name}
+    name: ''
+    log_model: false
+    prefix: ''
+    group: ${env.task}
+    tags: []
+    job_type: ''
+paths:
+  root_dir: .
+  data_dir: ${paths.root_dir}/abiomed/intermediate_data_d4rl/
+  model_dir: ${paths.root_dir}/saved_models/
+  log_dir: ${paths.root_dir}/log/
+  output_dir: ${hydra:runtime.output_dir}
+  ckth_path: ${paths.output_dir}/saved_models
+  work_dir: ${hydra:runtime.cwd}
+callbacks:
+  model_checkpoint:
+    _target_: lightning.pytorch.callbacks.ModelCheckpoint
+    dirpath: ${paths.output_dir}/checkpoints
+    filename: epoch_{epoch:03d}
+    monitor: val/acc
+    verbose: false
+    save_last: true
+    save_top_k: 1
+    mode: max
+    auto_insert_metric_name: false
+    save_weights_only: false
+    every_n_train_steps: null
+    train_time_interval: null
+    every_n_epochs: null
+    save_on_train_epoch_end: null
+  model_summary:
+    _target_: lightning.pytorch.callbacks.RichModelSummary
+    max_depth: -1
+  rich_progress_bar:
+    _target_: lightning.pytorch.callbacks.RichProgressBar
+dataset: hopper-expert-v0
+seed: 1
+pretrained: true
+algo_name: mbpo
