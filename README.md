@@ -1,8 +1,8 @@
-# Overview
+## Overview
 
 This is a modification to the MOPO algorithm with the integration of hydra lightning template.
 
-# Dependencies
+## Dependencies
 
 - MuJoCo 2.0
 - Gym 0.22.0
@@ -102,22 +102,22 @@ You can change this structure by modifying paths in [hydra configuration](config
 
 - Some frequently used commands:
 
-# Run MOPO with default transition model for hopper-expert-v0 dataset
+**Run MOPO with default transition model for hopper-expert-v0 dataset**
 ```
 python src/main_lightning.py dataset=hopper-expert-v0 pretrained=True train.eval_episodes=1000 train.device=0
 python src/main_lightning.py experiment=ensemble_hopper_expert_mopo
 
 ```
-# Run MBPO with default transition model for hopper-expert-v0 dataset
+**Run MBPO with default transition model for hopper-expert-v0 dataset**
 ```
 python src/main_lightning.py experiment=ensemble_hopper_expert_mbpo
 ```
 - currently debugged
-# Run MOPO with default world model for hopper-expert-v0 dataset
+**Run MOPO with default world model for hopper-expert-v0 dataset**
 ```
 python src/main_lightning.py experiment=wm_hopper_expert_mopo
 ```
-# Run MBPO with default world model for hopper-expert-v0 dataset
+**Run MBPO with default world model for hopper-expert-v0 dataset**
 ```
 python src/main_lightning.py experiment=wm_hopper_expert_mbpo
 ```
